@@ -15,6 +15,12 @@ export const SideBar = () => {
               Clock
               </NavLink>
 
+              <NavLink 
+              className={ ({isActive}) => `nav_links nav-link ${ isActive ? 'activeLink' : ''}` } 
+              to='/timer' >
+              Coming soon...
+              </NavLink>
+
 
             </div>
 
