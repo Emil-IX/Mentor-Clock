@@ -42,6 +42,9 @@ const getTimerResult = (time, endtime) => {
     <SideBar />
  
      <div className="container col-9 d-flex align-items-center justify-content-center flex-column">
+      <div className='wave'></div>
+
+
        <h1 className="title2">Mentor Timer</h1>
 
        <h1 className="title__coming">Coming soon </h1>
