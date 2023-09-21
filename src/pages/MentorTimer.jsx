@@ -34,7 +34,7 @@ const getTimerResult = (time, endtime) => {
     }
 }
 
- const { remainDays,remainHours,remainSeconds,remainMinutes  } = getTimerResult(time, '2023-10-19T15:39:14.519Z')
+ const { remainDays,remainHours,remainSeconds,remainMinutes  } = getTimerResult(time, '2024-01-24T15:00:00.519Z')
 
   return (
     <>
@@ -44,13 +44,13 @@ const getTimerResult = (time, endtime) => {
      <div className="container col-9 d-flex align-items-center justify-content-center flex-column">
        <h1 className="title2">Mentor Timer</h1>
 
-       <h1 className="text-danger fs-1 ">Coming soon...</h1>
+       <h1 className="title__coming">Coming soon </h1>
 
           <div  className='timer d-flex'>
-            <p className='timerNumber'> {remainDays}    </p>
-            <p className='timerNumber'> {remainHours}   </p>
-            <p className='timerNumber'> {remainMinutes} </p>
-            <p className='timerNumber'> {remainSeconds} </p>
+            <p className='timerNumber'> {remainDays}  <strong>Days</strong> </p>
+            <p className='timerNumber'> {remainHours} <strong>Hours</strong></p>
+            <p className='timerNumber'> {remainMinutes} <strong>Minutes</strong> </p>
+            <p className='timerNumber'> {remainSeconds} <strong>seconds</strong></p>
           </div>
 
       </div>   
@@ -59,4 +59,5 @@ const getTimerResult = (time, endtime) => {
      </>
   )
 }
+
 
