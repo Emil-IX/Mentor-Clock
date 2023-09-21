@@ -32,9 +32,9 @@ export const MentorClock = () => {
    <div className="container1 row">
    <SideBar />
 
-    <div className="container col-9 d-flex align-items-center justify-content-center flex-column">
     <div className='wave'></div>    <div className='wave'></div>
-      <h1 className="title2">Mentor clock</h1>
+    <div className="container col-9 d-flex align-items-center justify-content-center flex-column animate__animated animate__fadeIn">
+      <h1 className="title2 ">Mentor clock</h1>
       <div className="clock ">
           <div className="ClockInfo"> {showTime(time)}</div>
         </div>
