@@ -5,7 +5,8 @@ export const SideBar = () => {
       
         <div className='sidebar  col'>
 
-          <h1 className='title ms-4 text-center '>Mentor Clock</h1>
+          <h1 className='title ms-subtitle4 text-center '>Mentor Clock</h1>
+          <h3 className='subtitle text-center '>Frontend-M  Challange</h3>
 
             <div className='list_path  d-flex flex-column ms-5 '>
              <hr className='text-light'  />
