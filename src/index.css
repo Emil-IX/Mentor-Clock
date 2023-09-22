@@ -11,10 +11,11 @@
 
 
 :root {
-    
+ 
+--White: hsl(0, 0%, 100%);
+--whiteGrey: #e8e5f9;  
 --GrayishBlue: hsl(237, 18%, 59%);
 --SoftRed: #fb6087;
---White: hsl(0, 0%, 100%);
 --DarkSaturatedBlue: hsl(236, 21%, 26%);
 --DarkSaturatedBluedonw:#3C4059;
 --DarkSaturatedBlueup:#342840;
@@ -82,6 +83,24 @@ body {
 .timerNumber strong {
   color: var(--GrayishBlue);
   font-size: 1.2rem ;
+}
+
+
+.chronometer {
+  background-color: var(--VeryDarkMostlyBlackBlue);
+  border-radius: 50% ;
+  border: 4px solid #fb6087;
+  
+}
+
+.chronometer__numbers {
+  width: 250px;
+  padding: 100px 40px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 32px;
+  color: var(--whiteGrey);
+  font-weight: 500;
+  
 }
 
 
@@ -169,11 +188,9 @@ body {
     background-size: 100% 100px;
   }
 
-
-
-
-
-
+  .buttons {
+    margin: 2em 0;
+  }
 
 
   @media (min-width: 826px){

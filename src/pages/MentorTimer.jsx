@@ -49,7 +49,7 @@ const getTimerResult = (time, endtime) => {
      <div className="container col-9 d-flex align-items-center justify-content-center flex-column animate__animated  animate__fadeIn">
 
 
-       <h1 className="title2">Mentor Timer</h1>
+       <h1 className="title2">Mentor timer</h1>
 
        <h1 className="title__coming">Coming soon </h1>
           <div  className='timer d-flex'>
