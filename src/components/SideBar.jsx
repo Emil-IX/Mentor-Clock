@@ -28,6 +28,12 @@ export const SideBar = () => {
               Mentor Chronometer 
               </NavLink>
 
+              <NavLink 
+              className={ ({isActive}) => `nav_links nav-link ${ isActive ? 'activeLink' : ''}` } 
+              to='/weather' >
+              Mentor Weather
+              </NavLink>
+
 
             </div>
 
