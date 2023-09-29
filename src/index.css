@@ -236,3 +236,7 @@ body {
     }
 
   } 
+
+  .card__weather{
+    max-width: 540px
+  }

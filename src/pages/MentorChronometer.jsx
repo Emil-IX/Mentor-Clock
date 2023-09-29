@@ -68,7 +68,7 @@ export const MentorChronometer = () => {
     stop()
    }
   
-  console.log(click)  
+  // console.log(click)
 
   return (
    <>

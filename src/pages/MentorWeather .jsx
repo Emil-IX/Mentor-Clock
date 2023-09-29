@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { SideBar } from '../components/SideBar';
+import { WeatherCard } from '../components/weatherCard';
+
 
 export const MentorWeather  = () => {
 
@@ -10,12 +12,46 @@ export const MentorWeather  = () => {
     const [city, setCity] = useState('');
     const [country, setCountry] = useState('');
 
-    const apiKey = import.meta.env.VITE_API_KEY ;
+    const apiKey = import.meta.env.VITE_API_KEY;
 
     const URL = `https://api.openweathermap.org/data/2.5/weather?q= ${city},${country}&appid=${apiKey}`
 
-  console.log(URL);
+    // console.log(URL);
 
+    const findWeather = async ()  => {
+
+      setLoading(true)
+
+      await fetch(URL) 
+        .then(response => {
+          if (!response.ok) throw {response}
+          return response.json()
+        })
+        .then(info => { 
+          console.log(info)
+          setWeaterInfo(info)
+          // console.log(weaterInfo.main.temp)
+          setshowInfo(true);
+
+        }).catch(err => {
+          console.log(err)
+          setLoading(false);
+          setshowInfo(false);
+        })  
+         
+    }
+
+
+    const onSubmit = (e) => {
+      e.preventDefault()
+
+      findWeather();
+
+    }
+
+    
+
+    
 
 
   return (
@@ -35,7 +71,7 @@ export const MentorWeather  = () => {
 
       
 
-        <form className='weather__form' action='#' method='POST'>
+        <form className='weather__form' action='#' method='POST' onSubmit={ onSubmit} >
 
           <div className='weather__select'>
               <select value={country} onChange={ ({target}) => setCountry(target.value)} >
@@ -60,12 +96,16 @@ export const MentorWeather  = () => {
               onChange={({target}) => setCity(target.value)}
               />
 
+              <button className='btn btn-primary' type='submit'>Faind weather</button>
+
           </div>
         </form>
 
-       </div>
-         
+         {
+            showInfo && < WeatherCard weaterInfo={ weaterInfo } /> 
+         }
 
+       </div>
       </div>   
      </div>
  
