@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { SideBar } from '../components/SideBar';
 import { WeatherCard } from '../components/weatherCard';
+import { WForm } from '../components/WForm';
 
 
 export const MentorWeather  = () => {
-
 
     const [weaterInfo, setWeaterInfo] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -50,61 +50,30 @@ export const MentorWeather  = () => {
     }
 
     
-
-    
-
-
   return (
     <>
     <div className="container1 row">
     <SideBar />
  
       <div className='wave'></div>
-     <div className="container col-9 d-flex align-items-center justify-content-center flex-column animate__animated  animate__fadeIn">
+        <div className="container col-9 d-flex align-items-center justify-content-center flex-column animate__animated  animate__fadeIn">
 
+          <h1 className="title2">Mentor weather</h1>
 
-       <h1 className="title2">Mentor weather</h1>
+          <div className='weather'>
 
-       <h1 className="title__coming">Coming soon </h1>
-
-       <div className='weather'>
-
-      
-
-        <form className='weather__form' action='#' method='POST' onSubmit={ onSubmit} >
-
-          <div className='weather__select'>
-              <select value={country} onChange={ ({target}) => setCountry(target.value)} >
-                        <option disabled value=''> --Select-- </option>
-                        <option value="DO">Dominican Republic</option>
-                        <option value="US">USA</option>
-                        <option value="ES">Spain</option>
-                        <option value="AR">Argentina</option>
-                        <option value="MX">México</option>
-                        <option value="PE">Perú</option>
-                        <option value="CO">Colombia</option>
-                        <option value="CR">Costa Rica</option>
-
-                  </select>
-          </div>
-          
-          <div className='weather__input'>
-            <input 
-              type="text" 
-              name='city'
-              placeholder='Insert a city'
-              onChange={({target}) => setCity(target.value)}
+              <WForm 
+                country={ country }
+                setcountry={ setCountry }
+                setcity={ setCity }
+                onsubmit={ onSubmit }
               />
-
-              <button className='btn btn-primary' type='submit'>Faind weather</button>
-
-          </div>
-        </form>
-
-         {
-            showInfo && < WeatherCard weaterInfo={ weaterInfo } /> 
-         }
-
+              
+              < WeatherCard 
+                weaterInfo={ weaterInfo } 
+                showinfo={ showInfo }
+                /> 
+              
        </div>
       </div>   
      </div>
@@ -112,3 +81,4 @@ export const MentorWeather  = () => {
      </>
   )
 }
+

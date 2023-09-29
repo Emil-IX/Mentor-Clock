@@ -240,3 +240,7 @@ body {
   .card__weather{
     max-width: 540px
   }
+
+  .weather__select select {
+    width: 100%;
+  }
