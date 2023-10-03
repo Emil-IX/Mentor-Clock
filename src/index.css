@@ -135,11 +135,28 @@ body {
     font-weight: 400;
 
   }
+  .title2--weather {
+    margin: 1.7em 0;
+    font-size: 1.8rem;
+    color: var(--White);
+    font-weight: 400;
+
+  }
 
   .title__coming {
     font-family: 'Press Start 2P', cursive;
     color: var(--SoftRed);
     font-size: 1.7rem;
+    
+  }
+
+  .title__coming--look {
+    max-width: 450px;
+    margin-bottom: 2rem;
+    font-family: 'Press Start 2P', cursive;
+    color: var(--GrayishBlue);
+    font-size: 1.1rem;
+    text-align: center;
     
   }
 
@@ -190,6 +207,12 @@ body {
 
   .buttons {
     margin: 2em 0;
+  }
+
+
+  .img_cli {
+    height: 100%;
+    object-fit: cover;
   }
 
   .sk-cube-grid {

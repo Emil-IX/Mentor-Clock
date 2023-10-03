@@ -61,8 +61,8 @@ export const MentorWeather  = () => {
       <div className='wave'></div>
         <div className="container col-9 d-flex align-items-center justify-content-center flex-column animate__animated  animate__fadeIn">
 
-          <h1 className="title2">Mentor weather</h1>
-
+          <h1 className="title2--weather">Mentor weather</h1>
+          <h1 className="title__coming--look">Look up your weather in real time!</h1>
           <div className='weather'>
 
               <WForm 
