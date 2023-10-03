@@ -12,6 +12,8 @@ export const MentorWeather  = () => {
     const [city, setCity] = useState('');
     const [country, setCountry] = useState('');
 
+
+    //environment variable here
     const apiKey = import.meta.env.VITE_API_KEY;
 
     const URL = `https://api.openweathermap.org/data/2.5/weather?q= ${city},${country}&appid=${apiKey}`
@@ -31,6 +33,7 @@ export const MentorWeather  = () => {
           console.log(info)
           setWeaterInfo(info)
           // console.log(weaterInfo.main.temp)
+          setLoading(false)
           setshowInfo(true);
 
         }).catch(err => {
@@ -72,6 +75,7 @@ export const MentorWeather  = () => {
               < WeatherCard 
                 weaterInfo={ weaterInfo } 
                 showinfo={ showInfo }
+                isloading={loading}
                 /> 
               
        </div>
