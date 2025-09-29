@@ -5,6 +5,7 @@ export const MentorTimer = () => {
 
 
   const [time, setTime] = useState(new Date())
+  const [endTime, setEndTime] = useState('08-14-2026')
 
 
   useEffect(() => {
@@ -34,7 +35,7 @@ const getTimerResult = (time, endtime) => {
     }
 }
 
- const { remainDays,remainHours,remainSeconds,remainMinutes  } = getTimerResult(time, '2024-01-24T15:07:00.519Z')// put your date here
+ const { remainDays,remainHours,remainSeconds,remainMinutes  } = getTimerResult(time, endTime)// put your date here
 
   // if (remainDays < 1 && remainHours < 1 && remainMinutes < 1 && remainSeconds < 1 ) {
     // condition here
@@ -58,6 +59,15 @@ const getTimerResult = (time, endtime) => {
             <p className={ `timerNumber ${remainMinutes < 1 ?"animate__animated animate__bounce text-light" : "" } `}> {remainMinutes} <strong>Minutes</strong> </p>
             <p className={ `timerNumber ${remainSeconds === "00" ?"animate__animated animate__bounce text-light" : "" } `}> {remainSeconds} <strong>seconds</strong></p>
           </div>
+
+          <h2 className='selectTime'>Put a date</h2>
+          <input 
+          type="date" 
+          className='putDate'
+          value={endTime}
+          onChange={ e => setEndTime(e.target.value) }
+          />
+
 
       </div>   
      </div>

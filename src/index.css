@@ -35,6 +35,21 @@ body {
 
 }
 
+.putDate {
+  margin:1rem ;
+  padding: 2px 20px;
+  border: #e8e5f9 2px solid;
+  background-color: #3C4059;
+  color: #e8e5f9;
+}
+
+.selectTime {
+  font-size: 18px;
+  margin-top: 5em;
+  color: #b8b6c8;
+  font-weight: 600;
+}
+
 
 .clock {
     /* background: linear-gradient(0deg, var(--DarkSaturatedBluedonw) 0%,  var(--DarkSaturatedBluedonw), 46%, var(--DarkSaturatedBlueup) 47%, var(--DarkSaturatedBlueup) 100%); */
