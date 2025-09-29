@@ -67,7 +67,7 @@ export const MentorTimer = () => {
           <h1 className="title2">Mentor timer</h1>
 
           <h1 className="title__coming">Coming soon </h1>
-          {resume && endTime && <h1 className='title2'>{`${resume} - ${endTime}`}</h1>}
+          {resume && endTime && <h1 className='title2 title2--varian '>{`${resume} - ${endTime} !!`}</h1>}
 
           <div className='timer d-flex'>
             <p className={`timerNumber ${remainDays < 1 ? "animate__animated animate__bounce text-light" : ""} `} > {remainDays}  <strong>Days</strong> </p>

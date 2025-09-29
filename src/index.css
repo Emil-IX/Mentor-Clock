@@ -164,6 +164,12 @@ body {
     font-weight: 400;
 
   }
+
+  .title2--varian {
+    margin: 20px;
+
+  }
+  
   .title2--weather {
     margin: 1.7em 0;
     font-size: 1.8rem;
